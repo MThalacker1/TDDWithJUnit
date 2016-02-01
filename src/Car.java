@@ -2,7 +2,7 @@
  * Implementation of a Car object for a game or simulation.
  * Includes acceleration and deceleration.
  * @author Brian Hogan
- * @author yourname
+ * @author Miah Thalacker
  */
 public class Car {
 
@@ -30,6 +30,9 @@ public class Car {
 		return(speed);
 	};
 	
+	public String getColor(){
+		return(color);
+	}
 	/**
 	 * Accelerates the car up to the maximum amount
 	 * set in the object constructor.
@@ -50,7 +53,7 @@ public class Car {
 	 * @return string representation of object. 
 	 */
 	public String toString(){
-		// not implemented!
-		return("");
+		String stringSpeed = Integer.toString(this.getSpeed());
+		return("Color: "+this.getColor()+", Speed: "+stringSpeed);
 	}
 }
