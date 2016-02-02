@@ -38,22 +38,17 @@ public class Car {
 	 * set in the object constructor.
 	 * @param amount	The amount the car will accelerate
 	 */
+	
 	public void accelerate(int amount){
 		int limit = maxSpeed - speed;
-		if(amount >= limit){
-			speed = limit;
-		}else{
-			speed+= amount;
-		}
+		speed = (amount >= limit) ? speed = limit : speed + amount;
 	}
 	
 	public void decelerate(int amount){
-		if(amount <= speed){
-			speed -= amount;
-		}else{
-			speed = 0;
-		}
+		
+		speed = (amount <= speed) ? speed - amount : 0;
 	}
+	
 	
 	/**
 	 * Displays the object as a string in the format
