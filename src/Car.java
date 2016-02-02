@@ -33,6 +33,7 @@ public class Car {
 	public String getColor(){
 		return(color);
 	}
+	
 	/**
 	 * Accelerates the car up to the maximum amount
 	 * set in the object constructor.
@@ -45,7 +46,6 @@ public class Car {
 	}
 	
 	public void decelerate(int amount){
-		
 		speed = (amount <= speed) ? speed - amount : 0;
 	}
 	
@@ -56,7 +56,7 @@ public class Car {
 	 * @return string representation of object. 
 	 */
 	public String toString(){
-		String stringSpeed = Integer.toString(this.getSpeed());
-		return("Color: "+this.getColor()+", Speed: "+stringSpeed);
+		String stringSpeed = Integer.toString(speed);
+		return("Color: "+ color + ", Speed: "+ stringSpeed);
 	}
 }
